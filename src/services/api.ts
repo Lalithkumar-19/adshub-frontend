@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // Create axios instance with base configuration
 const api = axios.create({
-  baseURL: "https://webdev-agency-backend.vercel.app",
+  baseURL: "https://adshub-backend.vercel.app",
   headers: {
     'Content-Type': 'application/json',
   },

@@ -240,7 +240,7 @@ const Services = () => {
             </div>
 
             {/* CTA Button */}
-            <button
+            {/* <button
               onClick={() => navigate("/contact")}
               className={`group/btn relative px-8 py-4 bg-gradient-to-r ${service.gradient} text-white font-semibold rounded-2xl overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-lg border border-purple-500/50 cursor-pointer`}>
               <span className="relative z-10 flex items-center">
@@ -248,7 +248,7 @@ const Services = () => {
                 <ArrowRight className="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700"></div>
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

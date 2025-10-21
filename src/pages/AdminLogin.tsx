@@ -22,7 +22,7 @@ const AdminLogin = () => {
 
     try {
       // Replace with your actual API endpoint
-      const response = await axios.post("https://webdev-agency-backend.vercel.app/api/auth/login",credentials);
+      const response = await axios.post("https://adshub-backend.vercel.app/api/auth/login",credentials);
       console.log(response,"res");
       if (response.status==200) {
         const data = await response.data;
