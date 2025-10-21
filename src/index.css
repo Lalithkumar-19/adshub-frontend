@@ -1,0 +1,126 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 166 76% 37%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 166 50% 85%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 166 76% 37%;
+
+    --radius: 0.5rem;
+
+    --teal-50: 166 76% 97%;
+    --teal-100: 166 76% 89%;
+    --teal-500: 166 76% 37%;
+    --teal-600: 166 76% 31%;
+    --green-400: 134 61% 41%;
+    --green-500: 134 61% 41%;
+    --brand: 266 100% 50%;
+    --brand-foreground: 270 100% 98%;
+  }
+  .theme {
+    --animate-marquee: marquee var(--duration) linear infinite;
+  }
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --brand: 266 70% 60%;
+    --brand-foreground: 270 100% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-teal-500 {
+    color: hsl(var(--teal-500));
+  }
+
+  .text-teal-600 {
+    color: hsl(var(--teal-600));
+  }
+
+  .bg-teal-50 {
+    background-color: hsl(var(--teal-50));
+  }
+
+  .bg-teal-100 {
+    background-color: hsl(var(--teal-100));
+  }
+
+  .bg-teal-500 {
+    background-color: hsl(var(--teal-500));
+  }
+
+  .bg-teal-600 {
+    background-color: hsl(var(--teal-600));
+  }
+
+  .bg-green-400 {
+    background-color: hsl(var(--green-400));
+  }
+
+  .bg-green-500 {
+    background-color: hsl(var(--green-500));
+  }
+
+  .hover\:bg-teal-600:hover {
+    background-color: hsl(var(--teal-600));
+  }
+
+  .hover\:bg-green-600:hover {
+    background-color: hsl(134 61% 35%);
+  }
+
+  .border-teal-500 {
+    border-color: hsl(var(--teal-500));
+  }
+}
+
+@theme inline {
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+    }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+}
