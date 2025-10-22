@@ -314,7 +314,7 @@ Let's do care of your Business.`,
   ];
 
   return (
-    <div className="min-h-screen mt-10 bg-gradient-to-br from-white via-green-50 to-emerald-50 relative overflow-hidden">
+    <div className="min-h-screen mt-20 bg-gradient-to-br from-white via-green-50 to-emerald-50 relative overflow-hidden">
       {/* Floating Sparkles */}
       {sparkles.map((sparkle) => (
         <div

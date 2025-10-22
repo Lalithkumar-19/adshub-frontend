@@ -56,12 +56,8 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <a href="/" className="group flex items-center space-x-3">
-            <div className="relative">
-              <div className="w-10 h-10 bg-gradient-to-br from-purple-700 to-[#0000A0] rounded-xl flex items-center justify-center transform group-hover:rotate-12 transition-all duration-300 group-hover:scale-110">
-                <span className="text-white font-bold text-sm">logo</span>
-              </div>
-            </div>
+          <a href="/" className="group flex items-center ">
+            <img src="/logo.jpg" alt="logo" className="w-16  h-16" />
             <span className="text-xl font-bold text-white group-hover:text-purple-700 transition-colors duration-300">
               ADSHUB
             </span>

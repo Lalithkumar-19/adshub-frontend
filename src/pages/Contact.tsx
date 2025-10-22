@@ -137,7 +137,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="min-h-screen bg-gray-900 mt-20">
       <Toaster />
       {/* Contact Form Section */}
       <section className="py-20 bg-gradient-to-br from-gray-900 via-purple-900/20 to-black">
@@ -273,7 +273,7 @@ const Contact = () => {
                       Address:
                     </h3>
                     <p className="text-gray-300">
-                      London , uk
+                      London , UK
                     </p>
                   </div>
                 </div>
@@ -290,7 +290,7 @@ const Contact = () => {
                   <Phone className="w-6 h-6 text-purple-400 mt-1" />
                   <div>
                     <h3 className="font-semibold text-white mb-1">Phone:</h3>
-                    <p className="text-gray-300">+44 7880669085</p>
+                    <p className="text-gray-300">+44 7350054689</p>
                   </div>
                 </div>
               </div>

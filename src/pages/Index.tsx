@@ -10,6 +10,7 @@ import WhyChooseUs from "@/components/Home/WhyChooseUs";
 import TestimonialsSection from "@/components/Home/Testimonials";
 import TechStackSection from "@/components/Home/TechStack";
 import CTASection from "@/components/Home/CTASection";
+import { motion } from "framer-motion";
 
 const Index = () => {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -39,6 +40,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      
       {/* <Header /> */}
       <WebDevAgencyHero />
       {/* <TrustedByDemo /> */}
