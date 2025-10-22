@@ -199,7 +199,7 @@ const TechStackSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="relative">
             {/* Slider content */}
-            <div className="relative h-96 overflow-hidden rounded-3xl">
+            <div className="relative h-[500px] overflow-hidden rounded-3xl">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentSlide}
