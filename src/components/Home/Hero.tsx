@@ -154,7 +154,7 @@ export function WebDevAgencyHero() {
                       <Star key={star} className="w-4 h-4 lg:w-5 lg:h-5 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
-                  <span className="text-sm lg:text-base font-medium">Trusted by 50+ UK Businesses</span>
+                  <span className="text-sm lg:text-base font-medium">Trusted by 200+ UK Businesses</span>
                 </div>
               </motion.div>
 

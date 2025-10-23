@@ -10,6 +10,7 @@ import {
   Target,
   Heart,
   Youtube,
+  Facebook,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -308,6 +309,14 @@ const Contact = () => {
                     <Youtube className="w-5 h-5 text-purple-400 group-hover:text-purple-300 transition-colors duration-300" />
                     <div className="absolute inset-0 rounded-full bg-purple-500 opacity-0 group-hover:opacity-20 group-hover:animate-ping"></div>
                   </a>
+                  <a
+                    href="https://www.facebook.com/share/16sZcDgwaC/?mibextid=wwXIfr"
+                    className="group relative w-12 h-12 bg-gray-800 hover:bg-purple-900/50 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg border border-gray-700"
+                  >
+                    <Facebook className="w-5 h-5 text-purple-400 group-hover:text-purple-300 transition-colors duration-300" />
+                    <div className="absolute inset-0 rounded-full bg-purple-500 opacity-0 group-hover:opacity-20 group-hover:animate-ping"></div>
+                  </a>
+
                   <a
                     href="https://www.instagram.com/adshub.uk?igsh=MWd4YXJpcnE5NG9maw%3D%3D&utm_source=qr"
                     className="group relative w-12 h-12 bg-gray-800 hover:bg-purple-900/50 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg border border-gray-700"

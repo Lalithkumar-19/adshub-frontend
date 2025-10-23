@@ -47,12 +47,12 @@ const About = () => {
   const stats = [
     {
       icon: <Users className="w-8 h-8" />,
-      number: "50+",
+      number: "200+",
       label: "Businesses Helped",
     },
     {
       icon: <Award className="w-8 h-8" />,
-      number: "120+",
+      number: "500+",
       label: "Campaigns Launched",
     },
     {
@@ -77,9 +77,9 @@ const About = () => {
     },
     {
       name: "Gaurab",
-      role: "Co-Founder",
+      role: "Chief Technology Officer (CTO)",
       image: "👨‍💻",
-      bio: "Our visionary Co-founder and a driving force behind Adshub's innovative strategies. With a rich background in digital marketing and a passion for brand transformation, Gaurab has an innate ability to translate complex digital challenges into clear, actionable solutions. His expertise in SEO, SMM, and strategic content development consistently delivers impactful results, helping businesses thrive in the ever-evolving digital landscape.",
+      bio: "Our visionary CTO with 10+ years of experience is a driving force behind Adshub's innovative strategies. With a rich background in digital marketing and a passion for brand transformation, Gaurab has an innate ability to translate complex digital challenges into clear, actionable solutions. His expertise in SEO, SMM, and strategic content development consistently delivers impactful results, helping businesses thrive in the ever-evolving digital landscape.",
       magic: "🎯",
     },
   ];
