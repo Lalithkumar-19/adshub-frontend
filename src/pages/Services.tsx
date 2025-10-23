@@ -216,7 +216,7 @@ const Services = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 relative overflow-hidden">
+    <div className="min-h-screen mt-20 bg-gray-900 relative overflow-hidden">
       {/* Floating background elements */}
       <div className="fixed inset-0 pointer-events-none">
         {floatingElements.map((element) => (
