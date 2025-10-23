@@ -32,13 +32,13 @@ const App = () => (
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 1.5 }}
-          className="fixed bottom-6 right-6 z-50"
+          className="fixed bottom-6 cursor-pointer right-6 z-50"
           onClick={() => window.open('https://wa.me/+447350054689', '_blank')}
         >
           <button
 
 
-            className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl shadow-green-500/30 transition-all duration-300 hover:scale-110"
+            className="bg-green-500 cursor-pointer hover:bg-green-600 text-white p-4 rounded-full shadow-2xl shadow-green-500/30 transition-all duration-300 hover:scale-110"
             aria-label="Contact us on WhatsApp"
           >
             <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">

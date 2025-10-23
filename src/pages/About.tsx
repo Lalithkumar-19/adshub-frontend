@@ -57,7 +57,7 @@ const About = () => {
     },
     {
       icon: <Clock className="w-8 h-8" />,
-      number: "2+",
+      number: "10+",
       label: "Years Journey",
     },
     {
