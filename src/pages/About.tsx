@@ -1,181 +1,3 @@
-// import Header from "@/components/Header";
-// import Footer from "@/components/Footer";
-// import { Button } from "@/components/ui/button";
-// import { Users, Award, Clock, Globe } from "lucide-react";
-
-// const About = () => {
-//   const stats = [
-//     { icon: <Users className="w-8 h-8" />, number: "50+", label: "Projects Completed" },
-//     { icon: <Award className="w-8 h-8" />, number: "25+", label: "Happy Clients" },
-//     { icon: <Clock className="w-8 h-8" />, number: "5+", label: "Years Experience" },
-//     { icon: <Globe className="w-8 h-8" />, number: "10+", label: "Countries Served" },
-//   ];
-
-//   const team = [
-//     {
-//       name: "Sarah Johnson",
-//       role: "CEO & Founder",
-//       image: "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=300&h=300&fit=crop",
-//       bio: "With over 10 years in tech leadership, Sarah founded Innovatech to bridge the gap between innovative technology and business success.",
-//     },
-//     {
-//       name: "Michael Chen",
-//       role: "Lead Developer",
-//       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop",
-//       bio: "Michael specializes in full-stack development and has architected scalable solutions for startups to enterprise clients.",
-//     },
-//     {
-//       name: "Emily Rodriguez",
-//       role: "UI/UX Designer",
-//       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop",
-//       bio: "Emily creates intuitive and beautiful user experiences that drive engagement and conversion for our clients.",
-//     },
-//     {
-//       name: "David Kim",
-//       role: "Project Manager",
-//       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop",
-//       bio: "David ensures every project is delivered on time and exceeds client expectations through meticulous planning and execution.",
-//     },
-//   ];
-
-//   const values = [
-//     {
-//       title: "Innovation",
-//       description: "We stay at the forefront of technology trends to deliver cutting-edge solutions that give our clients a competitive advantage.",
-//     },
-//     {
-//       title: "Quality",
-//       description: "Every line of code we write and every design we create meets the highest standards of quality and performance.",
-//     },
-//     {
-//       title: "Collaboration",
-//       description: "We work closely with our clients as partners, ensuring their vision is realized through transparent communication and feedback.",
-//     },
-//     {
-//       title: "Results",
-//       description: "Our success is measured by the impact we create for our clients' businesses and the value we bring to their operations.",
-//     },
-//   ];
-
-//   return (
-//     <div className="min-h-screen bg-white">
-//       <Header />
-
-//       {/* Hero Section */}
-//       <section className="py-20 bg-gradient-to-br from-teal-50 to-green-50">
-//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//           <div className="text-center mb-16">
-//             <h1 className="text-5xl font-bold text-gray-900 mb-6">About Onlyus Media</h1>
-//             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-//               We're a passionate team of developers, designers, and strategists dedicated to transforming
-//               ideas into powerful digital experiences that drive business growth.
-//             </p>
-//           </div>
-
-//           {/* Stats */}
-//           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-//             {stats.map((stat, index) => (
-//               <div key={index} className="text-center">
-//                 <div className="w-16 h-16 bg-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white">
-//                   {stat.icon}
-//                 </div>
-//                 <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
-//                 <div className="text-gray-600">{stat.label}</div>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* Our Story */}
-//       <section className="py-20 bg-white">
-//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-//             <div>
-//               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
-//               <p className="text-gray-600 mb-6 leading-relaxed">
-//                 Founded in 2019, Onlyus Media emerged from a simple belief: that every business deserves
-//                 access to world-class web development that drives real results. Our founders, having worked at
-//                 leading tech companies, saw an opportunity to bring enterprise-level expertise to businesses of all sizes.
-//               </p>
-//               <p className="text-gray-600 mb-6 leading-relaxed">
-//                 Today, we're proud to have helped over 50 businesses transform their digital presence, from
-//                 startups launching their first website to established companies scaling their web applications.
-//               </p>
-//               <p className="text-gray-600 leading-relaxed">
-//                 Our commitment to innovation, quality, and client success has made us a trusted partner for
-//                 businesses looking to thrive in the digital landscape.
-//               </p>
-//             </div>
-//             <div className="relative">
-//               <img
-//                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop"
-//                 alt="Team collaboration"
-//                 className="w-full h-96 object-cover rounded-lg shadow-lg"
-//               />
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* Our Values */}
-//       <section className="py-20 bg-gray-50">
-//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//           <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">Our Values</h2>
-//           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-//             {values.map((value, index) => (
-//               <div key={index} className="bg-white p-8 rounded-lg shadow-lg">
-//                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{value.title}</h3>
-//                 <p className="text-gray-600 leading-relaxed">{value.description}</p>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* Team Section */}
-//       <section className="py-20 bg-white">
-//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//           <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">Meet Our Team</h2>
-//           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-//             {team.map((member, index) => (
-//               <div key={index} className="text-center">
-//                 <img
-//                   src={member.image}
-//                   alt={member.name}
-//                   className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-//                 />
-//                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
-//                 <p className="text-teal-600 font-medium mb-4">{member.role}</p>
-//                 <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* CTA Section */}
-//       <section className="py-20 bg-teal-500">
-//         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-//           <h2 className="text-4xl font-bold text-white mb-6">
-//             Ready to Work With Us?
-//           </h2>
-//           <p className="text-xl text-white/90 mb-8">
-//             Let's discuss how we can help transform your digital presence and drive your business forward.
-//           </p>
-//           <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 text-lg">
-//             Start Your Project
-//           </Button>
-//         </div>
-//       </section>
-
-//       <Footer />
-//     </div>
-//   );
-// };
-
-// export default About;
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -187,7 +9,9 @@ import {
   Sparkles,
   Code,
   Lightbulb,
-  Linkedin,
+  Zap,
+  Target,
+  TrendingUp,
 } from "lucide-react";
 
 const About = () => {
@@ -223,13 +47,13 @@ const About = () => {
   const stats = [
     {
       icon: <Users className="w-8 h-8" />,
-      number: "20+",
-      label: "Projects Crafted",
+      number: "50+",
+      label: "Businesses Helped",
     },
     {
       icon: <Award className="w-8 h-8" />,
-      number: "25+",
-      label: "Happy Clients",
+      number: "120+",
+      label: "Campaigns Launched",
     },
     {
       icon: <Clock className="w-8 h-8" />,
@@ -238,83 +62,53 @@ const About = () => {
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      number: "20+",
-      label: "Dreams Realized",
+      number: "UK",
+      label: "Location",
     },
   ];
 
   const team = [
     {
-      name: "Goutham",
-      role: "Co-Founder & Digital marketing ,SEO Expert",
-      image:
-        "https://media.licdn.com/dms/image/v2/D5603AQG_SqcLhs9Zuw/profile-displayphoto-crop_800_800/B56ZhFrAoxG0AM-/0/1753515561444?e=1756944000&v=beta&t=u32xjT7vOi1z8Qj-atz-39237N8RODl6I2NVyidWSuo",
-      bio: "Also pursuing B.Tech 4th year at RGUKT IIIT Ongole, Goutham brings creative vision to life through innovative design and strategic thinking.",
-      magic: "✨",
-      linkedin: "https://www.linkedin.com/in/gowtham-surya-naramamidi-8190ab244/"
+      name: "Sanjeev Singh",
+      role: "Founder",
+      image: "👨‍💼",
+      bio: "I noticed that while big businesses are growing fast through the internet, many small businesses are still disconnected from the digital world. Most of them don't know how to use social media or Google Ads to reach new customers and grow their sales. With that thought, I started AdsHub — to help small businesses build their identity, attract customers, and grow online with low investment.",
+      magic: "🚀",
     },
     {
-      name: "Lalith Kumar",
-      role: "Co-Founder & Web Developer & UI/UX Designer ",
-      image:
-        "https://i.ibb.co/W8NDV2j/customer-Extract-Customer-Data-item-json-customer-Phone-Date-now.jpg",
-      bio: "A 4th-year B.Tech student at RGUKT IIIT Ongole who believes code can weave magic into reality. Lalith transforms complex problems into elegant digital solutions.",
-      magic: "🌟",
-      linkedin: "https://www.linkedin.com/in/lalithkumar005/"
+      name: "Gaurab",
+      role: "Co-Founder",
+      image: "👨‍💻",
+      bio: "Our visionary Co-founder and a driving force behind Adshub's innovative strategies. With a rich background in digital marketing and a passion for brand transformation, Gaurab has an innate ability to translate complex digital challenges into clear, actionable solutions. His expertise in SEO, SMM, and strategic content development consistently delivers impactful results, helping businesses thrive in the ever-evolving digital landscape.",
+      magic: "🎯",
     },
-
-    {
-      name: "Ganesh Basavoju",
-      role: "Co-Founder & web developer & UI/UX Designer ",
-      image:
-        "https://avatars.githubusercontent.com/u/175459808?v=4",
-      bio: "Ganesh is a 4th-year B.Tech student at RGUKT IIIT Ongole who is passionate about coding and problem-solving. He is a technical wizard who can turn complex problems into elegant digital solutions.",
-      magic: "🔮",
-      linkedin: "https://www.linkedin.com/in/ganesh-basavoju/"
-    },
-    {
-      name: "Abhimanyu Sharma",
-      role: "Digital Marketing Expert & Fashion designer ",
-      image:
-        "https://media.licdn.com/dms/image/v2/D5603AQEz33QbL8oS7A/profile-displayphoto-shrink_400_400/B56ZZ7EVY.GkAg-/0/1745821456475?e=1758758400&v=beta&t=CpnICXrg_13rWKcQRbFW3UYr5SgHAN66HrOBDcljFTc",
-      bio: `Business Development expert, Funnel Builder/Development Specialist(Ecom, Coaches, Consultants, EdTech and Saas funnels) 
-And Omni Channel Marketing Expert. Helped 50+ Brands and Businesses. 
-Let's do care of your Business.`,
-      magic: "🔮",
-      linkedin: "https://www.linkedin.com/in/ceo-abhi/"
-    },
-
   ];
 
   const values = [
     {
-      title: "Innovation Magic",
-      description:
-        "We believe every line of code holds the potential to create something extraordinary. Our innovations emerge from the perfect blend of technical expertise and creative imagination.",
-      icon: <Lightbulb className="w-8 h-8" />,
+      title: "Digital Transformation",
+      description: "We help small businesses build their identity and attract customers through strategic digital marketing solutions.",
+      icon: <Zap className="w-8 h-8" />,
     },
     {
-      title: "Crafted Excellence",
-      description:
-        "Like master artisans, we pour our passion into every project, ensuring each digital creation is not just functional but truly enchanting.",
-      icon: <Star className="w-8 h-8" />,
+      title: "Growth Focused",
+      description: "Our mission is to give every small business the right direction, trust, and real growth with measurable results.",
+      icon: <TrendingUp className="w-8 h-8" />,
     },
     {
-      title: "Collaborative Alchemy",
-      description:
-        "The real magic happens when minds meet. We work with our clients as co-creators, transforming visions into digital reality through transparent partnership.",
-      icon: <Sparkles className="w-8 h-8" />,
+      title: "Low Investment, High Impact",
+      description: "We make digital marketing accessible to small businesses with solutions that deliver maximum ROI.",
+      icon: <Target className="w-8 h-8" />,
     },
     {
-      title: "Transformative Impact",
-      description:
-        "Our success is measured not just in code deployed, but in dreams realized and businesses transformed through the power of thoughtful technology.",
-      icon: <Code className="w-8 h-8" />,
+      title: "Partnership",
+      description: "We work as partners in your growth journey, ensuring your brand story resonates deeply and drives lasting engagement.",
+      icon: <Users className="w-8 h-8" />,
     },
   ];
 
   return (
-    <div className="min-h-screen mt-20 bg-gradient-to-br from-white via-green-50 to-emerald-50 relative overflow-hidden">
+    <div className="min-h-screen mt-20 bg-black relative overflow-hidden">
       {/* Floating Sparkles */}
       {sparkles.map((sparkle) => (
         <div
@@ -328,51 +122,53 @@ Let's do care of your Business.`,
             opacity: sparkle.opacity,
           }}
         >
-          <div className="w-full h-full bg-green-400 rounded-full animate-ping"></div>
+          <div className="w-full h-full bg-purple-500 rounded-full animate-ping"></div>
         </div>
       ))}
 
       {/* Mouse Trail Effect */}
       <div
-        className="fixed pointer-events-none z-10 w-6 h-6 bg-green-300 rounded-full opacity-30 blur-sm transition-all duration-100"
+        className="fixed pointer-events-none z-10 w-6 h-6 bg-purple-500 rounded-full opacity-30 blur-sm transition-all duration-100"
         style={{
           left: mousePosition.x - 12,
           top: mousePosition.y - 12,
-          background:
-            "radial-gradient(circle, rgba(34, 197, 94, 0.4) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(147, 51, 234, 0.4) 0%, transparent 70%)",
         }}
       />
+
+      {/* Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-10 left-4 w-48 h-48 lg:top-20 lg:left-10 lg:w-72 lg:h-72 bg-purple-700/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-10 right-4 w-64 h-64 lg:bottom-20 lg:right-10 lg:w-96 lg:h-96 bg-purple-700/15 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[600px] lg:h-[600px] bg-gradient-to-r from-purple-700/10 to-gray-800/10 rounded-full blur-3xl" />
+      </div>
 
       {/* Hero Section */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-green-100 to-transparent opacity-50 blur-3xl"></div>
-            <h1 className="text-6xl font-bold text-gray-900 mb-6 relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-900/30 to-transparent opacity-50 blur-3xl"></div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 relative">
               About{" "}
-              <span className="text-green-500 inline-block animate-bounce">
-                OnlyUs Media
-              </span>{" "}
-              Solutions
+              <span className="text-purple-500 inline-block">AdsHub</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed relative">
-              Born from the dreams of two passionate students, we weave
-              technology with imagination to create digital experiences that
-              don't just function—they enchant, inspire, and transform.
+            <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed relative">
+              Welcome to Adshub, where innovation meets impact in the digital world.
+              We are a dynamic digital marketing agency committed to transforming your vision into measurable success.
             </p>
           </div>
 
           {/* Animated Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white shadow-lg group-hover:scale-110 transition-transform duration-300 group-hover:shadow-green-300">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center mx-auto mb-4 text-white shadow-lg group-hover:scale-110 transition-transform duration-300 group-hover:shadow-purple-500/30">
                   {stat.icon}
                 </div>
-                <div className="text-4xl font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
                   {stat.number}
                 </div>
-                <div className="text-gray-600 group-hover:text-gray-800 transition-colors">
+                <div className="text-gray-400 group-hover:text-gray-300 transition-colors text-sm sm:text-base">
                   {stat.label}
                 </div>
               </div>
@@ -381,76 +177,69 @@ Let's do care of your Business.`,
         </div>
       </section>
 
-      {/* Our Magical Story */}
-      <section className="py-20 bg-white/60 backdrop-blur-sm">
+      {/* Our Mission */}
+      <section className="py-20 bg-gray-900/60 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-green-200 to-emerald-200 rounded-lg opacity-20 blur-xl"></div>
-              <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop"
-                alt="The magical beginning"
-                className="w-full h-96 object-cover rounded-lg shadow-2xl relative hover:shadow-green-300 transition-shadow duration-300"
-              />
+              <div className="absolute -inset-4 bg-gradient-to-r from-purple-900/40 to-purple-700/20 rounded-lg opacity-20 blur-xl"></div>
+              <div className="w-full h-80 sm:h-96 bg-gradient-to-br from-purple-900 to-gray-900 rounded-lg shadow-2xl relative flex items-center justify-center">
+                <div className="text-center text-white p-6">
+                  <div className="text-6xl mb-4">🎯</div>
+                  <p className="text-xl font-semibold">Transforming Small Businesses</p>
+                  <p className="text-gray-400 mt-2">Digital Growth Made Simple</p>
+                </div>
+              </div>
             </div>
             <div>
-              <h2 className="text-5xl font-bold text-gray-900 mb-6">
-                Our <span className="text-green-500">Magical</span> Story
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+                Our <span className="text-purple-500">Mission</span>
               </h2>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                It all began in the hallowed halls of RGUKT IIIT Ongole, where
-                two 4th-year B.Tech students Goutham and Lalith kumar and Ganesh,
-                discovered that code could be more than just logic—it could be
-                poetry, art, and magic combined.
+              <p className="text-gray-300 mb-6 leading-relaxed text-base sm:text-lg">
+                Our mission is to give every small business the right direction, trust, and real growth.
+                AdsHub is for those who want to turn their dreams into success.
               </p>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Late nights in the computer lab turned into early mornings of
-                inspiration. What started as assignments became passion
-                projects, and passion projects became the foundation of
-                something greater. We realized that every website, every
-                application, every digital solution we created had the power to
-                touch lives and transform businesses.
+              <p className="text-gray-300 mb-6 leading-relaxed text-base sm:text-lg">
+                From crafting compelling brand identities and designing intuitive websites to executing
+                powerful SEO, SMM, and content strategies, we build connections that convert.
               </p>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Today, Onlyus Media stands as a testament to the belief
-                that when young minds dare to dream and have the skills to make
-                those dreams reality, magic happens. We're not just building
-                websites— we're crafting digital experiences that make people
-                stop, smile, and believe in the power of technology.
+              <p className="text-gray-300 mb-6 leading-relaxed text-base sm:text-lg">
+                Our passion is empowering your growth, ensuring your brand story resonates deeply
+                and drives lasting engagement. Partner with Adshub, and let's create your remarkable digital future, together.
               </p>
-              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-400 to-green-500 text-white rounded-full font-semibold hover:from-green-500 hover:to-green-600 transition-all duration-300 transform hover:scale-105">
-                <Star className="w-5 h-5 mr-2" />
-                Still Students, Already Wizards
+              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-full font-semibold hover:from-purple-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                <Target className="w-5 h-5 mr-2" />
+                Growth-Driven Results
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our Magical Values */}
-      <section className="py-20 bg-gradient-to-br from-green-50 to-emerald-50">
+      {/* Our Values */}
+      <section className="py-20 bg-black/80 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-5xl font-bold text-center text-gray-900 mb-4">
-            Our <span className="text-green-500">Magical</span> Values
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-white mb-4">
+            Our <span className="text-purple-500">Values</span>
           </h2>
-          <p className="text-center text-gray-600 mb-16 text-lg">
-            The enchanted principles that guide our every creation
+          <p className="text-center text-gray-400 mb-12 sm:mb-16 text-lg">
+            The principles that drive our commitment to your success
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {values.map((value, index) => (
               <div
                 key={index}
-                className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg hover:shadow-green-200 transition-all duration-300 group border border-green-100"
+                className="bg-gray-900/80 backdrop-blur-sm p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-purple-500/20 transition-all duration-300 group border border-gray-800 hover:border-purple-500/30"
               >
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-green-500 rounded-lg flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
                     {value.icon}
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 group-hover:text-green-600 transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-purple-400 transition-colors">
                     {value.title}
                   </h3>
                 </div>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
                   {value.description}
                 </p>
               </div>
@@ -459,68 +248,60 @@ Let's do care of your Business.`,
         </div>
       </section>
 
-      {/* Meet Our Magical Team */}
-      <section className="py-20 bg-white/60 backdrop-blur-sm">
+      {/* Meet Our Team */}
+      <section className="py-20 bg-gray-900/60 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-5xl font-bold text-center text-gray-900 mb-4">
-            Meet Our <span className="text-green-500">Magical</span> Team
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-white mb-4">
+            Meet Our <span className="text-purple-500">Leadership</span>
           </h2>
-          <p className="text-center text-gray-600 mb-16 text-lg">
-            The dreamers, creators, and magic-makers behind every project
+          <p className="text-center text-gray-400 mb-12 sm:mb-16 text-lg">
+            The visionaries behind AdsHub's mission
           </p>
-          <div className="flex gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 max-w-4xl mx-auto">
             {team.map((member, index) => (
               <div key={index} className="text-center group">
                 <div className="relative mb-6">
-                  <div className="absolute -inset-2 bg-gradient-to-r from-green-200 to-emerald-200 rounded-full opacity-30 group-hover:opacity-60 transition-opacity blur-lg"></div>
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-32 h-32 rounded-full mx-auto object-cover relative border-4 border-white shadow-lg group-hover:scale-110 transition-transform duration-300"
-                  />
-                  <div className="absolute -top-2 -right-2 text-2xl">
-                    {member.magic}
+                  <div className="absolute -inset-2 bg-gradient-to-r from-purple-900/40 to-purple-700/20 rounded-full opacity-30 group-hover:opacity-60 transition-opacity blur-lg"></div>
+                  <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center text-white text-3xl sm:text-4xl relative border-4 border-gray-900 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    {member.image}
                   </div>
+                  {/* <div className="absolute -top-2 -right-2 text-2xl">
+                    {member.magic}
+                  </div> */}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
+                <h3 className="text-xl sm:text-2xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
                   {member.name}
                 </h3>
-                <p className="text-green-600 font-medium mb-4">{member.role}</p>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-purple-400 font-medium mb-4 text-sm sm:text-base">{member.role}</p>
+                <p className="text-gray-400 text-sm leading-relaxed text-justify">
                   {member.bio}
                 </p>
-                <div className="flex  w-full justify-center gap-3 mt-4">
-                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                    <Linkedin className="w-6 h-6 text-green-600" />
-                  </a>
-                  {/* <a href={member.instagram} target="_blank" rel="noopener noreferrer">
-                    <Instagram className="w-6 h-6 text-green-600" />
-                  </a> */}
-                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Magical CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-500 via-green-400 to-emerald-500 relative overflow-hidden">
-        <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700 relative overflow-hidden">
+        <div className="absolute inset-0 bg-black/10 backdrop-blur-sm"></div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <div className="mb-8">
-            <Sparkles className="w-16 h-16 text-white mx-auto mb-4 animate-spin" />
-            <h2 className="text-5xl font-bold text-white mb-6" onClick={() => { location.href = "/contact" }}>
-              Ready to Create <span className="italic">Magic</span> Together?
+            <Sparkles className="w-12 h-12 sm:w-16 sm:h-16 text-white mx-auto mb-4" />
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+              Ready to Grow Your Business?
             </h2>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Every great digital story begins with a conversation. Let's weave
-              your vision into reality and create something truly enchanting
-              that will make your audience believe in magic.
+            <p className="text-lg sm:text-xl text-white/90 mb-8 leading-relaxed">
+              Let's transform your digital presence and drive real growth for your business.
+              Partner with AdsHub and start your journey to success today.
             </p>
           </div>
-          <Button className="bg-white text-green-600 hover:bg-gray-100 px-12 py-4 text-lg font-bold rounded-full transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-white/30">
-            <Star className="w-5 h-5 mr-2" />
-            Begin Your Magical Journey
+          <Button
+            onClick={() => { location.href = "/contact" }}
+            className="bg-white text-purple-600 hover:bg-gray-100 px-8 sm:px-12 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-full transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-white/30"
+          >
+            <TrendingUp className="w-5 h-5 mr-2" />
+            Start Your Growth Journey
           </Button>
         </div>
       </section>

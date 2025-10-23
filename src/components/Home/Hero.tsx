@@ -279,13 +279,7 @@ export function WebDevAgencyHero() {
                 {/* Video Placeholder with gradient border */}
                 <div className="w-full h-full rounded-2xl lg:rounded-3xl overflow-hidden border-2 border-transparent">
                   <div className="w-full h-64 sm:h-80 lg:h-96 rounded-xl bg-gradient-to-r from-purple-700 to-gray-800 flex items-center justify-center">
-                    <div className="text-center text-white p-6">
-                      <div className="w-16 h-16 lg:w-20 lg:h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Play className="w-8 h-8 lg:w-10 lg:h-10 ml-1" />
-                      </div>
-                      <p className="text-lg lg:text-xl font-semibold">Success Stories</p>
-                      <p className="text-gray-300 text-sm lg:text-base mt-2">See how we drive results for businesses</p>
-                    </div>
+                    <img src="/hero-image.jpg" alt="hero-img" />
                   </div>
                 </div>
 
