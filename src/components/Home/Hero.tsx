@@ -161,7 +161,7 @@ export function WebDevAgencyHero() {
               {/* Main Headline - Mobile Optimized */}
               <div className="space-y-4">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight leading-tight sm:leading-normal">
-                  <TextRoll>We help UK small businesses </TextRoll>
+                  <TextRoll>We help UK Businesses </TextRoll>
                   <br />
                   <span className="bg-gradient-to-r from-purple-500 to-purple-700 bg-clip-text text-transparent">
                     get more customers

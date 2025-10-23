@@ -154,6 +154,7 @@ const Footer = () => {
                 Terms of Service
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-500 group-hover:w-full transition-all duration-300"></span>
               </a>
+
             </div>
           </div>
 
@@ -165,6 +166,10 @@ const Footer = () => {
             <ArrowUp className="w-5 h-5 group-hover:-translate-y-1 transition-transform duration-300" />
             <div className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 group-hover:animate-ping"></div>
           </button>
+          <a href="https://onlyusmedia.in" target="_blank" className="text-sm text-gray-500 hover:text-purple-400 transition-colors duration-300 relative group">
+            Designed and developed by OnlyUSMedia
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-500 group-hover:w-full transition-all duration-300"></span>
+          </a>
         </div>
       </div>
 
