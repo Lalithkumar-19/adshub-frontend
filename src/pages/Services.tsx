@@ -1,12 +1,11 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { Search, TrendingUp, MessageSquare, Users, Globe, Zap, Palette, Monitor, ArrowRight, Sparkles, Star, Target, Megaphone, PenTool, Heart, Building, FileText } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Services = () => {
   const [hoveredService, setHoveredService] = useState(null);
-  const [isVisible, setIsVisible] = useState({});
-  const observerRef = useRef();
   const navigate = useNavigate();
 
   const services = [
@@ -110,47 +109,19 @@ const Services = () => {
     duration: Math.random() * 10 + 10,
   }));
 
-  // Intersection Observer for animations
-  useEffect(() => {
-    observerRef.current = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(prev => ({ ...prev, [entry.target.id]: true }));
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    return () => observerRef.current?.disconnect();
-  }, []);
-
   const ServiceCard = ({ service, index }) => {
-    const cardRef = useRef();
-
-    useEffect(() => {
-      if (cardRef.current && observerRef.current) {
-        observerRef.current.observe(cardRef.current);
-      }
-    }, []);
 
     return (
-      <div
-        ref={cardRef}
-        id={`service-${index}`}
-        className={`group relative transition-all duration-1000 ${isVisible[`service-${index}`]
-          ? 'opacity-100 translate-y-0'
-          : 'opacity-0 translate-y-20'
-          }`}
-        style={{ transitionDelay: `${index * 200}ms` }}
-        onMouseEnter={() => setHoveredService(index)}
-        onMouseLeave={() => setHoveredService(null)}
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.2, delay: index * 0.2 }}
+        className="group relative"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Image Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Image Section - Mobile First */}
           <div className={`${index % 2 === 1 ? 'lg:order-2' : ''} relative`}>
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-800 to-purple-900/50 p-8 group-hover:shadow-2xl transition-all duration-500 border border-gray-700">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-800 to-purple-900/50 p-4 sm:p-6 lg:p-8 group-hover:shadow-2xl transition-all duration-500 border border-gray-700">
               {/* Animated background */}
               <div className="absolute inset-0 bg-gradient-to-br opacity-20 group-hover:opacity-30 transition-opacity duration-500">
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient}`}></div>
@@ -175,12 +146,12 @@ const Services = () => {
               )}
 
               {/* Service Icon */}
-              <div className={`absolute top-6 right-6 p-3 rounded-2xl bg-gradient-to-br ${service.gradient} text-white transform group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 border border-purple-500/50`}>
+              <div className={`absolute top-4 right-4 sm:top-6 sm:right-6 p-2 sm:p-3 rounded-2xl bg-gradient-to-br ${service.gradient} text-white transform group-hover:rotate-12 group-hover:scale-110 transition-all duration-300 border border-purple-500/50`}>
                 {service.icon}
               </div>
 
               {/* Image */}
-              <div className="relative z-10 h-80 rounded-2xl overflow-hidden group-hover:scale-105 transition-transform duration-500 border border-gray-600">
+              <div className="relative z-10 h-48 sm:h-64 lg:h-80 rounded-2xl overflow-hidden group-hover:scale-105 transition-transform duration-500 border border-gray-600">
                 <img
                   src={service.image}
                   alt={service.title}
@@ -191,28 +162,28 @@ const Services = () => {
             </div>
           </div>
 
-          {/* Content Section */}
-          <div className={`${index % 2 === 1 ? 'lg:order-1' : ''} space-y-6`}>
-            <div className="space-y-4">
-              <h3 className="text-4xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent group-hover:from-purple-400 group-hover:to-purple-300 transition-all duration-300">
+          {/* Content Section - Mobile First */}
+          <div className={`${index % 2 === 1 ? 'lg:order-1' : ''} space-y-4 sm:space-y-6`}>
+            <div className="space-y-3 sm:space-y-4">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent group-hover:from-purple-400 group-hover:to-purple-300 transition-all duration-300">
                 {service.title}
               </h3>
-              <p className="text-gray-300 leading-relaxed text-lg group-hover:text-gray-200 transition-colors duration-300">
+              <p className="text-gray-300 leading-relaxed text-base sm:text-lg group-hover:text-gray-200 transition-colors duration-300">
                 {service.description}
               </p>
             </div>
 
             {/* Features */}
-            <div className="space-y-3">
-              <h4 className="font-semibold text-white flex items-center">
-                <Sparkles className="w-5 h-5 text-purple-400 mr-2" />
+            <div className="space-y-2 sm:space-y-3">
+              <h4 className="font-semibold text-white flex items-center text-sm sm:text-base">
+                <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 mr-2" />
                 Key Features
               </h4>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2 sm:gap-3">
                 {service.features.map((feature, featureIndex) => (
                   <span
                     key={featureIndex}
-                    className="bg-purple-900/50 hover:bg-purple-800 text-purple-300 px-4 py-2 rounded-full text-sm font-medium border border-purple-700 hover:border-purple-500 transition-all duration-300 hover:scale-105 cursor-default"
+                    className="bg-purple-900/50 hover:bg-purple-800 text-purple-300 px-3 py-1 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium border border-purple-700 hover:border-purple-500 transition-all duration-300 hover:scale-105 cursor-default"
                   >
                     {feature}
                   </span>
@@ -221,37 +192,26 @@ const Services = () => {
             </div>
 
             {/* Clients */}
-            <div className="space-y-3">
-              <h4 className="font-semibold text-white flex items-center">
-                <Users className="w-5 h-5 text-purple-400 mr-2" />
+            <div className="space-y-2 sm:space-y-3">
+              <h4 className="font-semibold text-white flex items-center text-sm sm:text-base">
+                <Users className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 mr-2" />
                 Ideal Clients
               </h4>
-              <div className="space-y-2">
+              <div className="space-y-1 sm:space-y-2">
                 {service.clients.map((client, clientIndex) => (
                   <div
                     key={clientIndex}
                     className="flex items-center transform hover:translate-x-2 transition-transform duration-300"
                   >
-                    <div className="w-2 h-2 bg-purple-500 rounded-full mr-3 animate-pulse"></div>
-                    <span className="text-gray-300">{client}</span>
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mr-2 sm:mr-3 animate-pulse"></div>
+                    <span className="text-gray-300 text-sm sm:text-base">{client}</span>
                   </div>
                 ))}
               </div>
             </div>
-
-            {/* CTA Button */}
-            {/* <button
-              onClick={() => navigate("/contact")}
-              className={`group/btn relative px-8 py-4 bg-gradient-to-r ${service.gradient} text-white font-semibold rounded-2xl overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-lg border border-purple-500/50 cursor-pointer`}>
-              <span className="relative z-10 flex items-center">
-                {service.buttonText}
-                <ArrowRight className="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700"></div>
-            </button> */}
           </div>
         </div>
-      </div>
+      </motion.div>
     );
   };
 
@@ -275,72 +235,93 @@ const Services = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-20 sm:pt-32 pb-16 sm:pb-20 overflow-hidden">
         {/* Animated background gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/50 to-black opacity-60"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-900/20 to-transparent animate-pulse"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center space-y-6 sm:space-y-8"
+          >
             {/* Main heading with typewriter effect */}
-            <h1 className="text-6xl lg:text-7xl font-bold bg-gradient-to-r from-white via-purple-400 to-purple-600 bg-clip-text text-transparent animate-pulse">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold bg-gradient-to-r from-white via-purple-400 to-purple-600 bg-clip-text text-transparent animate-pulse">
               Amplify Your Brand
             </h1>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white">
               With Strategic Marketing ✨
             </h2>
 
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               We specialize in comprehensive digital marketing solutions that drive growth and maximize ROI.
               From SEO to social media, we craft strategies that elevate your brand and deliver measurable results.
             </p>
 
             {/* Hero features */}
-            <div className="flex flex-wrap justify-center gap-6 mt-12">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 lg:gap-6 mt-8 sm:mt-12">
               {[
-                { icon: <Target className="w-6 h-6" />, text: "Targeted Campaigns" },
-                { icon: <TrendingUp className="w-6 h-6" />, text: "ROI Focused" },
-                { icon: <Zap className="w-6 h-6" />, text: "Rapid Results" }
+                { icon: <Target className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, text: "Targeted Campaigns" },
+                { icon: <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, text: "ROI Focused" },
+                { icon: <Zap className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />, text: "Rapid Results" }
               ].map((feature, index) => (
-                <div key={index} className="flex items-center space-x-3 bg-gray-800/80 backdrop-blur-sm px-6 py-3 rounded-2xl border border-purple-700 hover:border-purple-500 hover:bg-gray-800 transition-all duration-300 hover:scale-105">
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-center space-x-2 bg-gray-800/80 backdrop-blur-sm px-4 py-2 sm:px-6 sm:py-3 rounded-2xl border border-purple-700 hover:border-purple-500 hover:bg-gray-800 transition-all duration-300 hover:scale-105"
+                >
                   <div className="text-purple-400">{feature.icon}</div>
-                  <span className="font-medium text-white">{feature.text}</span>
-                </div>
+                  <span className="font-medium text-white text-sm sm:text-base">{feature.text}</span>
+                </motion.div>
               ))}
             </div>
 
             {/* CTA Button */}
-            <button
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
               onClick={() => {
                 document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="group relative px-10 py-5 bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-500 hover:to-purple-700 text-white font-bold text-lg rounded-2xl overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl mt-8 border border-purple-500/50 cursor-pointer">
+              className="group relative px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-5 bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-500 hover:to-purple-700 text-white font-bold text-base sm:text-lg rounded-2xl overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl mt-6 sm:mt-8 border border-purple-500/50 cursor-pointer"
+            >
               <span className="relative z-10 flex items-center">
                 Explore Our Services
-                <Sparkles className="w-6 h-6 ml-2 animate-spin" />
+                <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 ml-2 animate-spin" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-gradient-to-b from-gray-900 to-black relative">
+      <section id="services" className="py-16 sm:py-20 bg-gradient-to-b from-gray-900 to-black relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <div className="text-center mb-20 space-y-4">
-            <h2 className="text-5xl font-bold bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16 lg:mb-20 space-y-3 sm:space-y-4"
+          >
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent">
               Our Marketing Services ✨
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive digital marketing solutions designed to grow your brand and drive measurable business results.
             </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-purple-600 mx-auto rounded-full"></div>
-          </div>
+            <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-purple-500 to-purple-600 mx-auto rounded-full"></div>
+          </motion.div>
 
           {/* Services Grid */}
-          <div className="space-y-32">
+          <div className="space-y-16 sm:space-y-20 lg:space-y-24">
             {services.map((service, index) => (
               <ServiceCard key={index} service={service} index={index} />
             ))}
