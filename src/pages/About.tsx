@@ -79,7 +79,7 @@ const About = () => {
       name: "Gaurab",
       role: "Chief Technology Officer (CTO)",
       image: "👨‍💻",
-      bio: "Our visionary CTO with 10+ years of experience is a driving force behind Adshub's innovative strategies. With a rich background in digital marketing and a passion for brand transformation, Gaurab has an innate ability to translate complex digital challenges into clear, actionable solutions. His expertise in SEO, SMM, and strategic content development consistently delivers impactful results, helping businesses thrive in the ever-evolving digital landscape.",
+      bio: "Our visionary CTO with 10+ years of experience is a driving force behind AdsHub's innovative strategies. With a rich background in digital marketing and a passion for brand transformation, Gaurab has an innate ability to translate complex digital challenges into clear, actionable solutions. His expertise in SEO, SMM, and strategic content development consistently delivers impactful results, helping businesses thrive in the ever-evolving digital landscape.",
       magic: "🎯",
     },
   ];
@@ -153,7 +153,7 @@ const About = () => {
               <span className="text-purple-500 inline-block">AdsHub</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed relative">
-              Welcome to Adshub, where innovation meets impact in the digital world.
+              Welcome to AdsHub, where innovation meets impact in the digital world.
               We are a dynamic digital marketing agency committed to transforming your vision into measurable success.
             </p>
           </div>
@@ -205,7 +205,7 @@ const About = () => {
               </p>
               <p className="text-gray-300 mb-6 leading-relaxed text-base sm:text-lg">
                 Our passion is empowering your growth, ensuring your brand story resonates deeply
-                and drives lasting engagement. Partner with Adshub, and let's create your remarkable digital future, together.
+                and drives lasting engagement. Partner with AdsHub, and let's create your remarkable digital future, together.
               </p>
               <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-full font-semibold hover:from-purple-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                 <Target className="w-5 h-5 mr-2" />

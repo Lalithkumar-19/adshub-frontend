@@ -59,7 +59,7 @@ const Header = () => {
           <a href="/" className="group flex items-center ">
             <img src="/logo.jpg" alt="logo" className="w-16  h-16" />
             <span className="text-xl font-bold text-white group-hover:text-purple-700 transition-colors duration-300">
-              ADSHUB
+              AdsHub
             </span>
           </a>
 
