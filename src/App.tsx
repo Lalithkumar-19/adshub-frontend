@@ -33,7 +33,7 @@ const App = () => (
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 1.5 }}
           className="fixed bottom-6 right-6 z-50"
-          onClick={() => window.open('https://wa.me/919281487865', '_blank')}
+          onClick={() => window.open('https://wa.me/+447350054689', '_blank')}
         >
           <button
 
