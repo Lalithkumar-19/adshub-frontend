@@ -161,13 +161,13 @@ export function WebDevAgencyHero() {
               {/* Main Headline - Mobile Optimized */}
               <div className="space-y-4">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight leading-tight sm:leading-normal">
-                  <TextRoll>We help UK Businesses </TextRoll>
+                  <TextRoll>We help Businesses to </TextRoll>
                   <br />
                   <span className="bg-gradient-to-r from-purple-500 to-purple-700 bg-clip-text text-transparent">
-                    get more customers
+                    Scale 10X
                   </span>
                   <br />
-                  <TextRoll>with Meta, Instagram & Google Ads</TextRoll>
+                  <TextRoll>with Digital Presence</TextRoll>
                 </h1>
 
                 <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
@@ -283,7 +283,7 @@ export function WebDevAgencyHero() {
                   </div>
                 </div>
 
-              
+
 
                 {/* Floating elements */}
                 <div className="absolute -top-4 -right-4 w-8 h-8 lg:w-12 lg:h-12 bg-purple-700 rounded-full blur-sm opacity-70 animate-bounce" />

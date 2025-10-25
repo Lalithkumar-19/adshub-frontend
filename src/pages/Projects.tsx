@@ -108,7 +108,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="min-h-screen mt-10 bg-gradient-to-br from-gray-900 via-purple-900/20 to-black relative overflow-hidden">
+    <div className="min-h-screen mt-10 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
       {/* Magical background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-64 h-64 bg-purple-600/20 rounded-full blur-3xl animate-pulse"></div>
@@ -152,7 +152,7 @@ const Projects = () => {
                 }}
               />
             </div>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-100 max-w-4xl mx-auto leading-relaxed">
               Discover our successful portofolios where creativity meets strategy. 
               Each project showcases our expertise in driving brand growth and delivering 
               measurable results through innovative marketing solutions.
@@ -160,7 +160,7 @@ const Projects = () => {
             {totalCount > 0 && (
               <div className="mt-6 inline-flex items-center bg-gray-800/70 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg border border-purple-700/50">
                 <Sparkles className="w-4 h-4 text-purple-400 mr-2" />
-                <span className="text-sm font-medium text-gray-300">
+                <span className="text-sm font-medium text-gray-200">
                   Showcasing {projects.length} of {totalCount} 
                 </span>
               </div>
@@ -208,14 +208,14 @@ const Projects = () => {
                 <Sparkles className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-6 text-purple-400 animate-pulse" />
               </div>
               <div className="text-xl text-gray-300 font-medium">
-                Loading our Portofolio...
+                Loading our Portfolio...
               </div>
             </div>
           ) : projects.length === 0 ? (
             <div className="text-center py-20">
               <div className="text-6xl mb-4">🎯</div>
               <div className="text-xl text-gray-300 font-medium">
-                No Portofolio found with these filters.
+                No Portfolio found with these filters.
               </div>
               <div className="text-gray-400 mt-2">
                 Try adjusting your search criteria to discover more success stories!

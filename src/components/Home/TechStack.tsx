@@ -17,8 +17,8 @@ const TechStackSection = () => {
         { name: "Next.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
         { name: "Vue.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" },
         { name: "TypeScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-        { name: "Tailwind", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" },
-        { name: "Framer Motion", logo: "https://camo.githubusercontent.com/179d66ab2b0321726efa88a2d985c008ddfd8a1a216f7f0091ecfe444c0655b0/68747470733a2f2f6672616d657275736572636f6e74656e742e636f6d2f696d616765732f34386861395a64796f416e584235626f3771346f672e706e67" }
+        { name: "Tailwind", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSDKn3vA2YUbXzN0ZC3gALWJ08gJN-Drl15w&s" },
+        { name: "Framer Motion", logo: "https://cdn.dribbble.com/userupload/28046663/file/still-879bd5f88faa2c210d4013090939ae0e.png" }
       ]
     },
     {
@@ -28,8 +28,8 @@ const TechStackSection = () => {
       color: "from-purple-600 to-purple-700",
       technologies: [
         { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-        { name: "Sanity", logo: "https://cdn.sanity.io/images/3do82whm/next/8affb0735d38d1241d1d7c9c8944d4c31c41e4c0-250x250.png" },
-        { name: "Strapi", logo: "https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/2659/posts/37416/image-upload/Screen%20Shot%202022-01-17%20at%2010.23.25.png" },
+        { name: "Sanity", logo: "https://cmscritic.com/ms-content/uploads/2025/05/sanity-logo-icon.png?format=auto&width=256" },
+        { name: "Strapi", logo: "https://assets.super.so/e7c0f16c-8bd3-4c76-8075-4c86f986e1b2/uploads/favicon/9c68ae10-0a8a-4e3f-9084-3625b19df9cb.png" },
         { name: "Express", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
         { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
         { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" }
@@ -41,10 +41,10 @@ const TechStackSection = () => {
       description: "Scalable infrastructure with insights",
       color: "from-purple-700 to-purple-800",
       technologies: [
-        { name: "AWS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
+        { name: "AWS", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf8_ACwdQT0NMs_ptU8917_1THnLQqxK_u8Q&s" },
         { name: "Vercel", logo: "https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_light_background.png" },
         { name: "Google Analytics", logo: "https://www.gstatic.com/analytics-suite/header/suite/v2/ic_analytics.svg" },
-        { name: "Hotjar", logo: "https://static.hotjar.com/images/logo.svg" },
+        { name: "Hotjar", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcByf7jTv3Ro7HN3y3ITLU1aRDEFUZYvvFBg&s" },
         { name: "Firebase", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
         { name: "GitHub", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" }
       ]
@@ -56,11 +56,11 @@ const TechStackSection = () => {
       color: "from-purple-400 to-purple-500",
       technologies: [
         { name: "HubSpot", logo: "https://cdn.worldvectorlogo.com/logos/hubspot-1.svg" },
-        { name: "Mailchimp", logo: "https://cdn.worldvectorlogo.com/logos/mailchimp-1.svg" },
-        { name: "Google Ads", logo: "https://www.gstatic.com/adsense/assistant/docs/img_google_ads_icon.png" },
-        { name: "Meta Business", logo: "https://static.xx.fbcdn.net/rsrc.php/yT/r/aGT3gskzWBf.ico" },
+        { name: "Mailchimp", logo: "https://images.icon-icons.com/2407/PNG/512/mailchimp_icon_146054.png" },
+        { name: "Google Ads", logo: "https://logos-world.net/wp-content/uploads/2022/05/Google-AdWords-Logo.png" },
+        { name: "Meta Business", logo: "https://framerusercontent.com/images/233VSmAsi5mRqo1hd77OZcJQh2c.webp" },
         { name: "Google Tag Manager", logo: "https://www.gstatic.com/analytics-suite/header/suite/v2/ic_tag_manager.svg" },
-        { name: "Optimizely", logo: "https://www.optimizely.com/contentassets/3f6e2e2a8dbe4a5b8b4f12f1b6b8f8a2/favicon.ico" }
+        { name: "Optimizely", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnm5MszqMlimNF0LH6BQ_dpbzDH-TPBrK7Bg&s" }
       ]
     }
   ];
@@ -318,8 +318,8 @@ const TechStackSection = () => {
                 whileTap={{ scale: 0.95 }}
                 onClick={() => goToSlide(index)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${currentSlide === index
-                    ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/25 border border-purple-500'
-                    : 'bg-gray-800/80 text-gray-300 hover:bg-gray-700 hover:text-purple-400 border border-gray-600'
+                  ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/25 border border-purple-500'
+                  : 'bg-gray-800/80 text-gray-300 hover:bg-gray-700 hover:text-purple-400 border border-gray-600'
                   }`}
               >
                 <span className="flex items-center space-x-2">
